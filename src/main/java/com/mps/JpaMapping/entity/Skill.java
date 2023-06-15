@@ -15,6 +15,6 @@ public class Skill {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer skillId;
     private String skill;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Person> persons;
 }
