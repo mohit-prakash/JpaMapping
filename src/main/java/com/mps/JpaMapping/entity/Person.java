@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="person_tab")
@@ -18,4 +19,6 @@ public class Person {
     private String personMobileNo;
     @OneToOne(mappedBy = "person")
     private Aadhar aadhar;
+    @OneToMany(mappedBy = "person")
+    private List<Laptop> laptops;
 }
