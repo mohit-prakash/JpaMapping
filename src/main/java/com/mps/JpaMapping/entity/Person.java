@@ -21,4 +21,6 @@ public class Person {
     private Aadhar aadhar;
     @OneToMany(mappedBy = "person")
     private List<Laptop> laptops;
+    @ManyToMany(mappedBy = "persons")
+    private List<Skill> skills;
 }
