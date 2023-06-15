@@ -1,9 +1,14 @@
 package com.mps.JpaMapping.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "laptop_tab")
+@Getter
+@Setter
 public class Laptop {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
